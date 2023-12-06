@@ -1,0 +1,117 @@
+$bg: rgb(9, 10, 10);
+.banner{
+    background-color: $bg;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-evenly;
+    padding: 2rem;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background: $bg;
+        opacity: 0.5;
+    }
+    h1,p{
+        width: 40%;
+        color: white;
+        font-size: 2rem;
+        z-index: 10;
+        // margin-left: 16px;
+    }
+    p{
+       font-size: 12px; 
+       letter-spacing: 1px;
+       word-spacing: 2px;
+       font-weight: 100;
+    }
+    >div{
+        display: flex;
+        button{
+            padding: 16px;
+            width: 150px;
+            outline: none;
+            border: none;
+            z-index: 10;
+            border-radius: 5px;
+            margin-right: 1rem;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                opacity: 0.6;
+                
+            }
+            &:nth-child(odd){
+                background-color: white;
+                color: $bg;
+            }
+            &:nth-child(even){
+                background-color: rgb(129, 129, 129);
+                color: white;
+            }
+        }
+        svg{
+            font-size: 25px;
+            margin:0 10px;
+        }
+    }
+    
+}
+.row{
+    background-color: $bg;
+    padding: 15px;
+   >div{
+    display: flex;
+   overflow-x: auto;
+
+   } 
+   >h2{
+    font-weight: 300;
+    margin: 7px;
+   }
+}
+.card{
+    width: 200px;
+    margin: 7px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    &:hover{
+        transform: translateY(-10px);
+    }
+}
+.genreBox{
+    overflow-x: auto;
+    display: flex;
+    background-color: $bg;
+    height: 100px;
+    >a{
+        color: $bg;
+        background-color: white;
+        margin: 1rem;
+        transition: all 0.5s;
+        padding: 1rem;
+        border-radius: 5px;
+        min-width: 8rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        &:hover{
+            background-color: rgb(236, 236, 236);
+        }
+    }
+}
